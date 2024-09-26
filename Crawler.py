@@ -26,7 +26,7 @@ def crawl(url, visited):
         # print("root name", root.name)
 
         # Например, извлечем все заголовки <h2> на странице
-        titles = root.find_all(['h1', 'h2', 'h3', 'h4'])
+        titles = root.find_all(['h1', 'h2'], limit=3)
         # Открываем файл для записи
         with open('output.txt', 'a', encoding='utf-8') as file:
             # Пишем результаты в файл
